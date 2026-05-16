@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot | Personal Site</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="index.html">MySite</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="games.html">Games</a>
+        <a href="memory.html">Memory</a>
+        <a href="chatbot.html">Chatbot</a>
+        <a href="video.html">Video</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="hero hero-small">
+      <p class="eyebrow">Custom Chatbot</p>
+      <h1>Test a chatbot and control how the AI responds.</h1>
+      <p class="lead">
+        This page lets the message style be customized with a few safe settings
+        instead of exposing raw API fields directly.
+      </p>
+    </section>
+
+    <section class="chatbot-layout">
+      <aside class="chatbot-settings card">
+        <h2>Settings</h2>
+
+        <label class="field-label" for="chatbot-model">Model</label>
+        <select id="chatbot-model" class="game-input">
+          <option value="gpt-5.5">gpt-5.5</option>
+          <option value="gpt-5.4-mini">gpt-5.4-mini</option>
+        </select>
+
+        <label class="field-label" for="chatbot-prompt">Role / instructions</label>
+        <textarea id="chatbot-prompt" class="chatbot-textarea" rows="6">You are a helpful assistant for a personal website. Keep answers clear, warm, and practical.</textarea>
+
+        <label class="field-label" for="chatbot-tone">Tone</label>
+        <select id="chatbot-tone" class="game-input">
+          <option value="friendly">Friendly</option>
+          <option value="professional">Professional</option>
+          <option value="teacher">Teacher</option>
+          <option value="playful">Playful</option>
+        </select>
+
+        <label class="field-label" for="chatbot-length">Response length</label>
+        <select id="chatbot-length" class="game-input">
+          <option value="short">Short</option>
+          <option value="medium" selected>Medium</option>
+          <option value="long">Long</option>
+        </select>
+
+        <label class="field-label" for="chatbot-temperature">Creativity: <span id="chatbot-temperature-value">0.7</span></label>
+        <input id="chatbot-temperature" type="range" min="0" max="1" step="0.1" value="0.7" class="chatbot-range">
+
+        <label class="chatbot-check">
+          <input id="chatbot-memory" type="checkbox" checked>
+          <span>Keep conversation memory</span>
+        </label>
+
+        <p class="chatbot-note">
+          This page needs the local Node server and an <code>OPENAI_API_KEY</code>
+          to work.
+        </p>
+      </aside>
+
+      <section class="chatbot-panel card">
+        <div id="chatbot-messages" class="chatbot-messages">
+          <article class="chatbot-bubble chatbot-bubble-bot">
+            Hello. Send a message to test the chatbot.
+          </article>
+        </div>
+
+        <div class="chatbot-compose">
+          <textarea id="chatbot-input" class="chatbot-textarea chatbot-input" rows="3" placeholder="Type your message here..."></textarea>
+          <div class="button-row">
+            <button id="chatbot-send" class="button button-small" type="button">Send</button>
+            <button id="chatbot-clear" class="button button-secondary button-small" type="button">Clear Chat</button>
+          </div>
+          <p id="chatbot-status" class="chatbot-status"></p>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Personal Site</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/chatbot.js"></script>
+</body>
+</html>

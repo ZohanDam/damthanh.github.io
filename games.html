@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Games | Personal Site</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="index.html">MySite</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="games.html">Games</a>
+        <a href="memory.html">Memory</a>
+        <a href="chatbot.html">Chatbot</a>
+        <a href="video.html">Video</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="hero hero-small">
+      <p class="eyebrow">Games Page</p>
+      <h1>Two simple browser games built with HTML, CSS, and JavaScript.</h1>
+      <p class="lead">
+        This page now has a number guessing game and a math game for children.
+        Both run directly in the browser, so they are useful for learning basic
+        web development.
+      </p>
+      <a class="button" href="memory.html">Open Memory Card Match</a>
+    </section>
+
+    <section class="photo-section photo-section-tight">
+      <div class="photo-grid photo-grid-two">
+        <figure class="photo-card">
+          <img src="images/games-salute.jpg" alt="Child smiling and saluting in a colorful play area.">
+          <figcaption>A playful photo fits the learning game section.</figcaption>
+        </figure>
+
+        <figure class="photo-card">
+          <img src="images/cardboard-costume.jpg" alt="Child wearing a handmade cardboard costume at home.">
+          <figcaption>Creative costumes match the make-and-learn theme.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="game-grid">
+      <article class="card game-card">
+        <p class="game-tag">Game 1</p>
+        <h2>Guess the Number</h2>
+        <p class="game-copy">
+          Guess a secret number from 1 to 20. The page will tell whether the
+          guess is too high or too low.
+        </p>
+
+        <div class="game-box">
+          <label class="field-label" for="guess-input">Enter a number</label>
+          <input id="guess-input" class="game-input" type="number" min="1" max="10000" placeholder="1 to 10,000">
+          <div class="button-row">
+            <button id="guess-button" class="button button-small" type="button">Check Guess</button>
+            <button id="guess-reset" class="button button-secondary button-small" type="button">New Number</button>
+          </div>
+          <p id="guess-message" class="game-message">Start by entering a number.</p>
+          <p id="guess-attempts" class="game-meta">Attempts: 0</p>
+        </div>
+      </article>
+
+      <article class="card game-card">
+        <p class="game-tag">Game 2</p>
+        <h2>Math Game for Children</h2>
+        <p class="game-copy">
+          Practice easy addition and subtraction. The numbers stay small and the
+          subtraction questions never go below zero.
+        </p>
+
+        <div class="game-box">
+          <p id="math-question" class="math-question">3 + 2 = ?</p>
+          <label class="field-label" for="math-input">Enter the answer</label>
+          <input id="math-input" class="game-input" type="number" min="0" placeholder="Your answer">
+          <div class="button-row">
+            <button id="math-button" class="button button-small" type="button">Check Answer</button>
+            <button id="math-next" class="button button-secondary button-small" type="button">Next Question</button>
+          </div>
+          <p id="math-message" class="game-message">Solve the question above.</p>
+          <p id="math-score" class="game-meta">Score: 0 correct</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="card-grid learning-grid">
+      <article class="card">
+        <h2>What the number game teaches</h2>
+        <p>
+          It uses an input field, buttons, variables, conditions, and feedback
+          messages.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>What the math game teaches</h2>
+        <p>
+          It creates random questions, checks answers, and updates the score on
+          the page.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>How to expand later</h2>
+        <p>
+          More games can be added by creating another section in this page and
+          writing new logic in <code>js/script.js</code>, or by creating a new
+          page such as <code>memory.html</code>.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Personal Site</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

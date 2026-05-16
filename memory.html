@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Card Match | Personal Site</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="memory-screen">
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="index.html">MySite</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="games.html">Games</a>
+        <a href="memory.html">Memory</a>
+        <a href="chatbot.html">Chatbot</a>
+        <a href="video.html">Video</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page memory-page">
+    <section class="hero hero-small">
+      <p class="eyebrow">Memory Card Match</p>
+      <h1>Match icon pairs across four simple modes.</h1>
+      <p class="lead">
+        Pick a mode, choose a difficulty, and flip cards until every pair is
+        matched. The board now stretches to the page height so the game feels
+        more like a full-screen experience.
+      </p>
+    </section>
+
+    <section class="memory-shell">
+      <div class="memory-toolbar">
+        <div class="memory-control-group">
+          <p class="memory-label">Mode</p>
+          <div class="memory-chip-row" id="memory-theme-controls">
+            <button class="memory-chip is-active" type="button" data-theme="animals">Animals</button>
+            <button class="memory-chip" type="button" data-theme="shapes">Shapes</button>
+            <button class="memory-chip" type="button" data-theme="numbers">Numbers</button>
+            <button class="memory-chip" type="button" data-theme="colors">Colors</button>
+          </div>
+        </div>
+
+        <div class="memory-control-group">
+          <p class="memory-label">Difficulty</p>
+          <div class="memory-chip-row" id="memory-difficulty-controls">
+            <button class="memory-chip is-active" type="button" data-difficulty="hard">Hard</button>
+            <button class="memory-chip" type="button" data-difficulty="very-hard">Very Hard</button>
+          </div>
+        </div>
+
+        <div class="memory-status-card">
+          <p class="memory-label">Moves</p>
+          <p id="memory-moves" class="memory-value">0</p>
+        </div>
+
+        <div class="memory-actions">
+          <button id="memory-restart" class="button button-small" type="button">Restart Game</button>
+          <button id="memory-fullscreen" class="button button-secondary button-small" type="button">Full Screen</button>
+        </div>
+      </div>
+
+      <p id="memory-message" class="memory-message">Find all matching pairs.</p>
+      <div id="memory-board" class="memory-board" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Personal Site</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/memory.js"></script>
+</body>
+</html>

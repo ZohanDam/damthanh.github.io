@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video | Personal Site</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="index.html">MySite</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="games.html">Games</a>
+        <a href="memory.html">Memory</a>
+        <a href="chatbot.html">Chatbot</a>
+        <a href="video.html">Video</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="hero hero-small">
+      <p class="eyebrow">Video Page</p>
+      <h1>This page can also work as a simple photo gallery.</h1>
+      <p class="lead">
+        A page name can stay the same while the content changes. Later, real
+        videos can be added with <code>iframe</code> embeds, but for now this
+        page shows selected photos from the collection.
+      </p>
+    </section>
+
+    <section class="photo-grid photo-grid-three">
+      <figure class="photo-card">
+        <img src="images/funny-face.jpg" alt="Young child making a funny face while holding a can.">
+        <figcaption>One expressive photo is enough from the similar set.</figcaption>
+      </figure>
+
+      <figure class="photo-card">
+        <img src="images/games-salute.jpg" alt="Child standing in a ball pit and saluting.">
+        <figcaption>Bright colors help the page feel more lively.</figcaption>
+      </figure>
+
+      <figure class="photo-card">
+        <img src="images/baby-closeup.jpg" alt="Close-up portrait of a baby with wide eyes.">
+        <figcaption>Portrait photos also work well as gallery cards.</figcaption>
+      </figure>
+    </section>
+
+    <section class="card-grid learning-grid">
+      <article class="card">
+        <h2>Why not all photos?</h2>
+        <p>
+          Several images were very similar, so only a smaller set was kept to
+          make the site cleaner.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>How to add more later</h2>
+        <p>
+          Copy another file into the <code>images</code> folder and then add a
+          new <code>img</code> tag in the page.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>How to add real videos</h2>
+        <p>
+          Replace one photo card with an embedded video using the HTML
+          <code>iframe</code> tag.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Personal Site</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

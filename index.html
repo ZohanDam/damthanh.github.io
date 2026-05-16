@@ -1,17 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Website</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Personal Site</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-  <h1>Hello World</h1>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="index.html">MySite</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="games.html">Games</a>
+        <a href="memory.html">Memory</a>
+        <a href="chatbot.html">Chatbot</a>
+        <a href="video.html">Video</a>
+      </div>
+    </nav>
+  </header>
 
-  <button onclick="changeText()">
-    Click me
-  </button>
+  <main class="page">
+    <section class="hero hero-layout">
+      <div class="hero-copy">
+        <p class="eyebrow">Simple Multipage Website</p>
+        <h1>Welcome to a personal site built for learning and sharing memories.</h1>
+        <p class="lead">
+          This home page now has a featured family photo and a small gallery.
+          It still keeps the structure simple, so the code is easy to study.
+        </p>
+        <a class="button" href="games.html">See the Games Page</a>
+      </div>
 
-  <script src="script.js"></script>
+      <div class="hero-media">
+        <img src="images/home-family.jpg" alt="Two children dressed up and holding hands in front of flowers.">
+      </div>
+    </section>
+
+    <section class="card-grid">
+      <article class="card">
+        <h2>What this site teaches</h2>
+        <p>
+          A multipage website uses separate HTML files for separate pages, while
+          sharing the same CSS and JavaScript files.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>How navigation works</h2>
+        <p>
+          The links in the top navigation point to other HTML files in the same
+          folder, such as <code>games.html</code>, <code>memory.html</code>, and
+          <code>video.html</code>.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>How to grow later</h2>
+        <p>
+          New pages can be added by creating another HTML file and then adding a
+          new navigation link to every page.
+        </p>
+      </article>
+    </section>
+
+    <section class="photo-section">
+      <div class="section-heading">
+        <p class="eyebrow">Photo Moments</p>
+        <h2>Simple image sections make a site feel more personal.</h2>
+      </div>
+
+      <div class="photo-grid photo-grid-two">
+        <figure class="photo-card photo-tall">
+          <img src="images/baby-closeup.jpg" alt="Close-up photo of a baby looking at the camera.">
+          <figcaption>A close-up portrait adds warmth to the home page.</figcaption>
+        </figure>
+
+        <figure class="photo-card photo-tall">
+          <img src="images/baby-hat.jpg" alt="Baby wearing a light hat while crawling on a bed.">
+          <figcaption>A second image balances the layout and gives variety.</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Personal Site</p>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
